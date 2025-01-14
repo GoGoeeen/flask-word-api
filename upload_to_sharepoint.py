@@ -9,7 +9,7 @@ load_dotenv()
 # Azure AD-Konfigurationswerte aus der .env-Datei laden
 tenant_id = os.getenv('TENANT_ID')
 client_id = os.getenv('CLIENT_ID')
-sp_client_key = os.getenv('SP_CLIENT_KEY')
+sp_client_secret = os.getenv('SP_CLIENT_SECRET')
 drive_id = os.getenv('DRIVE_ID')
 
 # Authority und Scopes
@@ -19,7 +19,7 @@ scopes = ["https://graph.microsoft.com/.default"]
 # MSAL Authentifizierung
 app = ConfidentialClientApplication(
     client_id=client_id,
-    client_credential=sp_client_key,
+    client_credential=sp_client_secret,
     authority=authority
 )
 
