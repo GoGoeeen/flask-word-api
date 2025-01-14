@@ -10,6 +10,7 @@ load_dotenv()
 tenant_id = os.getenv('TENANT_ID')
 client_id = os.getenv('CLIENT_ID')
 sp_client_key = os.getenv('SP_CLIENT_KEY')
+drive_id = os.getenv('DRIVE_ID')
 
 # Authority und Scopes
 authority = f"https://login.microsoftonline.com/{tenant_id}"
@@ -32,7 +33,6 @@ else:
 
 # Funktion zum Hochladen der Datei zu SharePoint
 def upload_to_sharepoint(file_path, file_name):
-    drive_id = "b!inA_AtyNo0eG1qN3kSLZhVMd1OFTBepOmEgJSr6GALx4ZkQbU4aoQ5d0cWXXYraL"
     upload_url = f"https://graph.microsoft.com/v1.0/drives/{drive_id}/root:/Operations/9. Saved Docx/{file_name}:/content"
 
     headers = {
