@@ -48,6 +48,3 @@ def upload_to_sharepoint(file_path, file_name):
     else:
         print(f"Fehler beim Hochladen der Datei: {response.status_code}")
         print(response.json())
-
-# Datei hochladen
-upload_to_sharepoint("filled_document.docx", "filled_document.docx")
